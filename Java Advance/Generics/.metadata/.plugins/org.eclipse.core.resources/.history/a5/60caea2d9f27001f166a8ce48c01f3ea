@@ -1,0 +1,17 @@
+package Lork.java;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class genaricShow {
+
+	public static void main(String[] args) {
+		List list = new ArrayList<>();
+		list.add("Lork");
+		list.add(Integer.valueOf(5));
+		for(Object obj : list) {
+			String str = (String) obj;
+		}
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.java.BeanScopes;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+@SpringBootApplication
+public class Main {
+	@Autowired
+	private SingletonBean singletonBean1;
+	
+	@Autowired
+	private SingletonBean singletonBean2;
+	public static void main(String[] args) {
+		SpringApplication.run(Main.class, args);
+	}
+
+}

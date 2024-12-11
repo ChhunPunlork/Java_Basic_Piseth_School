@@ -1,0 +1,112 @@
+package JDBC.sql.java.Model.Service;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import JDBC.sql.java.Model.Student;
+
+public class Student_Service {
+	public void save(Student student, Connection connection) {
+		String sql = "INSERT INTO students(id, name, gender, grade) VALUES (?, ?, ?, ?)";
+		try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+			// Setting parameters for the PreparedStatement
+			preparedStatement.setInt(1, student.getId());
+			preparedStatement.setString(2, student.getName());
+			preparedStatement.setString(3, student.getGender());
+			preparedStatement.setInt(4, student.getGrade());
+			// Execute the update
+			preparedStatement.executeUpdate();
+			System.out.println("Successfully");
+		} catch (SQLException e) {
+			System.out.println("Error: ");
+			e.printStackTrace();
+		}
+	}
+
+	public Student FindById(int idStu, Connection connection) {
+		String sqlStatement = "SELECT * FROM students WHERE id = ?";
+		try {
+			PreparedStatement Prstatement = connection.prepareStatement(sqlStatement);
+			Prstatement.setInt(1, idStu);
+			ResultSet resultSet = Prstatement.executeQuery();
+			if (resultSet.next()) {
+//				int id = resultSet.getInt(1);
+//				String name = resultSet.getString(2);
+//				String gender = resultSet.getString(3);
+//				int grade = resultSet.getInt(4);
+//				return new Student(id, name, gender, grade);
+				Student student = getStudent(resultSet);
+				return student;
+			}
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+		return null;
+	}
+	private Student getStudent(ResultSet resultSet){
+		int id = resultSet.getInt(1);
+		String name = resultSet.getString(2);
+		String gender = resultSet.getString(3);
+		int grade = resultSet.getInt(4);
+		return new Student(id, name, gender, grade);
+	}
+
+	public void updateStudent(Student student, Connection connection) {
+		int findId = student.getId();
+		Student stundentFind = FindById(findId, connection);
+		if (stundentFind != null) {
+			String sql = "UPDATE students SET name = ?, gender = ?, grade = ? WHERE id = ?";
+			try {
+				PreparedStatement preparedStatement = connection.prepareStatement(sql);
+				preparedStatement.setString(1, student.getName());
+				preparedStatement.setString(2, student.getGender());
+				preparedStatement.setInt(3, student.getGrade());
+				preparedStatement.setInt(4, findId);
+				// Execute the update
+				preparedStatement.executeUpdate();
+				System.out.println("Update successed!");
+			} catch (SQLException e) {
+				System.out.println(e.getMessage());
+				e.printStackTrace();
+			}
+		} else {
+			System.out.println("Not found student with id = " + findId);
+		}
+		
+	}
+	public void deleteStudent(int idToFind, Connection connection) {
+		Student FindId = FindById(idToFind, connection);
+		if(FindId != null) {
+			String sql = "DELETE student WHERE id = ?;";
+			try {
+				PreparedStatement prepareStatement = connection.prepareStatement(sql);
+				prepareStatement.setInt(1, idToFind);
+				prepareStatement.executeUpdate();
+				System.out.println("Delete successed!");
+			} catch (SQLException e) {
+				System.out.println(e.getMessage());
+				e.printStackTrace();
+			}
+		}else {
+			System.out.println("Not found student with id = " + FindId);
+		}
+	}
+	public List<Student> getSllStudent(Connection connection){
+		List<Student> students = new ArrayList<>();
+		String sql = "SELECET * FROM students;";
+		PreparedStatement preparedStatement = connection.prepareStatement(sql);
+		ResultSet resultSet = preparedStatement.executeQuery();
+		while(resultSet.next()) {
+			Student student = getStudent(resultSet);
+			students.add(student);
+		}
+		
+		return students;
+	}
+}

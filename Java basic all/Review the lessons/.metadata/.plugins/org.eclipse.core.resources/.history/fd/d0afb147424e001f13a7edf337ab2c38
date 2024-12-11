@@ -1,0 +1,33 @@
+package collectionframework;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+
+public class arrayList {
+	public static void main(String[] aqrs) {
+		ArrayList<String> nameList = new ArrayList();
+		nameList.add("Lork");
+		nameList.add("Leu");
+		nameList.add("Noth");
+		System.out.println(nameList);
+		//setindex
+		System.out.println(nameList.get(1));
+		
+		//updateIndex
+		nameList.set(2, "Nith");
+		System.out.println(nameList);
+		
+		//checkSize
+		System.out.println(nameList.size());
+		
+		//sort
+		Comparator<String> comare = new Comparator<String>() {
+			
+			@Override
+			public int compare(String o1, String o2) {
+				return o1.compareTo(o2);
+			}
+		};
+			
+	}
+}

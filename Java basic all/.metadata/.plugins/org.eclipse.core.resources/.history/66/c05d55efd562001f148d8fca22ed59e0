@@ -1,0 +1,57 @@
+package Main_Demo;
+
+import java.io.Serial;
+
+public class Fruit {
+	private int fruitCode;
+	private String Fruitname;
+	private double FruitPrice;
+	private int FruitQuatity;
+
+	public Fruit(int fruitCode, String fruitname, double fruitPrice, int fruitQuatity) {
+		super();
+		this.fruitCode = fruitCode;
+		Fruitname = fruitname;
+		FruitPrice = fruitPrice;
+		FruitQuatity = fruitQuatity;
+	}
+
+	public int getFruitCode() {
+		return fruitCode;
+	}
+
+	public void setFruitCode(int fruitCode) {
+		this.fruitCode = fruitCode;
+	}
+
+	public String getFruitname() {
+		return Fruitname;
+	}
+
+	public void setFruitname(String fruitname) {
+		Fruitname = fruitname;
+	}
+
+	public double getFruitPrice() {
+		return FruitPrice;
+	}
+
+	public void setFruitPrice(double fruitPrice) {
+		FruitPrice = fruitPrice;
+	}
+
+	public int getFruitQuatity() {
+		return FruitQuatity;
+	}
+
+	public void setFruitQuatity(int fruitQuatity) {
+		FruitQuatity = fruitQuatity;
+	}
+
+	@Override
+	public String toString() {
+		return "Fruit [fruitCode=" + fruitCode + ", Fruitname=" + Fruitname + ", FruitPrice=" + FruitPrice
+				+ ", FruitQuatity=" + FruitQuatity + "]";
+	}
+
+}

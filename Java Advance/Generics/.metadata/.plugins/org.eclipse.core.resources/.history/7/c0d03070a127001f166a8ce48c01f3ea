@@ -1,0 +1,25 @@
+package Lork.java;
+
+public class genaricType<T> {
+	private T value;
+
+	public T getValue() {
+		return value;
+	}
+
+	public void setValue(T value) {
+		this.value = value;
+	}
+	public static void main(String[] args) {
+		genaricType<String> type = new genaricType<>();
+		type.setValue("Lork");
+		
+		String str = (String) type.getValue();
+		System.out.println(str);
+		
+		genaricType type2 = new genaricType();
+		type2.setValue("Son");
+		String st = (String) type.getValue();
+		System.out.println(st);
+	}
+}

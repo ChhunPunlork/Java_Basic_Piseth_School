@@ -1,0 +1,11 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="java.awt.event.ActionListener"><rhs name\="Lork.java.Demo$Gui"/></lhs><lhs name\="java.util.EventListener"><rhs name\="Lork.java.Demo$Gui"/></lhs><lhs name\="javax.swing.JFrame"><rhs name\="Lork.java.Demo$Gui"/></lhs><lhs name\="javax.swing.WindowConstants"><rhs name\="Lork.java.Demo$Gui"/></lhs><lhs name\="javax.accessibility.Accessible"><rhs name\="Lork.java.Demo$Gui"/></lhs><lhs name\="javax.swing.RootPaneContainer"><rhs name\="Lork.java.Demo$Gui"/></lhs><lhs name\="javax.swing.TransferHandler$HasGetTransferHandler"><rhs name\="Lork.java.Demo$Gui"/></lhs><lhs name\="java.awt.Frame"><rhs name\="Lork.java.Demo$Gui"/></lhs><lhs name\="java.awt.MenuContainer"><rhs name\="Lork.java.Demo$Gui"/></lhs><lhs name\="java.awt.Window"><rhs name\="Lork.java.Demo$Gui"/></lhs><lhs name\="java.awt.Container"><rhs name\="Lork.java.Demo$Gui"/></lhs><lhs name\="java.awt.Component"><rhs name\="Lork.java.Demo$Gui"/></lhs><lhs name\="java.awt.image.ImageObserver"><rhs name\="Lork.java.Demo$Gui"/></lhs><lhs name\="Lork.java.Demo$Gui"><rhs name\="Lork.java.Demo$Gui"/></lhs><lhs name\="Lork.java.GtSt.Products"><rhs name\="Lork.java.GtSt.Products"/></lhs><lhs name\="java.util.SequencedCollection"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.Collection"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.lang.Iterable"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.List"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.Iterator"><rhs name\="java.util.Scanner"/></lhs><lhs name\="java.io.Closeable"><rhs name\="java.util.Scanner"/></lhs><lhs name\="java.lang.AutoCloseable"><rhs name\="java.util.Scanner"/></lhs><lhs name\="Lork.java.Customer.Customers"><rhs name\="Lork.java.Customer.Customers"/></lhs></history>
+content_assist_number_of_computers=14
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+org.eclipse.jdt.ui.formatterprofiles.version=23
+spelling_locale=en_GB
+spelling_locale_initialized=true
+typefilter_migrated_2=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

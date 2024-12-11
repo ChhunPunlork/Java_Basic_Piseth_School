@@ -1,0 +1,10 @@
+package Main_Demo;
+
+import DB_Service.JDBC_Service;
+
+public class GDS_Demo {
+	public static void main(String[] arqs) {
+		JDBC_Service DBservice = new JDBC_Service();
+		DBservice.ConnetToDB();
+	}
+}

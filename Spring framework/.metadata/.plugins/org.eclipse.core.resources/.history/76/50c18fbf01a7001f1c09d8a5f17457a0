@@ -1,0 +1,26 @@
+package com.piseth.java.BeanLifecycle;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
+
+@Configuration
+@ComponentScan("com.piseth.java.BeanLifecycle")
+public class BeanConfig {
+	//@Bean(initMethod = "Set up", destroyMethod = "clear")
+	/*
+	@Bean
+	public Student getStudent() {
+		Student student = new Student();
+
+		return new Student();
+	}
+
+	@Bean
+	@Lazy
+	public Subject getSubject() {
+		return new Subject();
+	}
+*/
+}

@@ -1,0 +1,10 @@
+package test;
+
+public class SchoolApp {
+	public static void main() {
+		School school = new School();
+		school.setName("Registration Student");
+		
+		
+	}
+}

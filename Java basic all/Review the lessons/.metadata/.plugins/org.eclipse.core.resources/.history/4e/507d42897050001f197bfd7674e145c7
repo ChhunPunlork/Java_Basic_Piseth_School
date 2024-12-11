@@ -1,0 +1,16 @@
+package Test;
+
+import java.time.LocalDate;
+
+public class VoteApp {
+	public static void main(String[] arqs) {
+		Person ps1 = new Person("Chhun Punork", "Male", LocalDate.of(2002, 9,15), "09641");
+		Person ps2 = new Person("Chan Vatanaka", "Male", LocalDate.of(1999, 10,22), "09642");
+		
+		VoterService voterService = new VoterService();
+		voterService.register(ps1);
+		voterService.register(ps2);
+		
+		voterService.display();
+	}
+}

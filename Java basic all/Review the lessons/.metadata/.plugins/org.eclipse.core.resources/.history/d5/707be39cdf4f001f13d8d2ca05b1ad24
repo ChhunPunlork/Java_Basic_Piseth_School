@@ -1,0 +1,10 @@
+package Exception;
+
+public class MultipleException {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,11 @@
+package Exception;
+
+public class ExceptionDemo {
+	public static void main(String[] arqs) {
+		int a = 5;
+		int b = 0;
+		double x = q/b;
+		System.out.println(x);
+		
+	}
+}

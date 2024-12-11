@@ -1,0 +1,14 @@
+package test;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class hashMap {
+	public static void main(String[] arqs) {
+		Map<String, Double> MapFruit = new HashMap<>();
+		MapFruit.put("Mango", 12.00);
+		System.out.println(MapFruit);
+		
+		System.out.println(MapFruit.entrySet());
+	}
+}

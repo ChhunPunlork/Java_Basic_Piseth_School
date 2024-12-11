@@ -1,0 +1,22 @@
+package com.piseth.java.PhoneShop.controller;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.piseth.java.PhoneShop.DTO.BrandDTO;
+import com.piseth.java.PhoneShop.Entity.Brand;
+import com.piseth.java.PhoneShop.Entity.Model;
+
+@RestController
+@RequestMapping("brands")
+public class BrandController {
+
+	public ResponseEntity<?> create(@RequestBody BrandDTO dto) {
+		Brand brand = new Brand();
+		brand.setId(dto.getId());
+		brand.setName(dto.getName());
+		return ResponseEntity.ok(brand);
+	}
+}

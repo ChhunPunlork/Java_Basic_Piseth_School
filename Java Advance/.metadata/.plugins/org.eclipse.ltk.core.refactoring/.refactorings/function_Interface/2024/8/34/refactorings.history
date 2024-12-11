@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;function_Interface_Demo.Banary_Interface&apos; to &apos;Binary_Interface&apos;&#x0D;&#x0A;- Original project: &apos;function_Interface&apos;&#x0D;&#x0A;- Original element: &apos;function_Interface_Demo.Banary_Interface&apos;&#x0D;&#x0A;- Renamed element: &apos;function_Interface_Demo.Binary_Interface&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Banary_Interface&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;function_Interface_Demo{Banary_Interface.java[Banary_Interface" matchStrategy="1" name="Binary_Interface" qualified="false" references="true" similarDeclarations="false" stamp="1724135991545" textual="false" version="1.0"/>
+</session>

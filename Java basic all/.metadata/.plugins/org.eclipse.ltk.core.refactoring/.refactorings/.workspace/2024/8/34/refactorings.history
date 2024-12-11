@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;IOStrean&apos; to &apos;IOStream&apos;&#x0D;&#x0A;- Original element: &apos;IOStrean&apos;&#x0D;&#x0A;- Renamed element: &apos;IOStrean&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;IOStrean&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=IOStrean" name="IOStream" references="true" stamp="1724419250235" version="1.0"/>
+</session>

@@ -1,0 +1,35 @@
+package Main_Demo_FileSevice;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+import Main_Demo.Fruit;
+import Main_Demo.Fruit_Shop_Service;
+
+public class File_Service {
+	private String FileName = "C:\\Users\\Asus\\OneDrive\\Desktop\\FruitDara.txt";
+	Fruit_Shop_Service service;
+	public void AddToFile(String data) {
+		try {
+			FileWriter fileWriter = new FileWriter(FileName);
+			fileWriter.write(data);
+			fileWriter.close();
+		} catch (IOException e) {
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+	}
+	public void ReadFromFile() {
+		try {
+			FileReader fileReader = new FileReader(FileName);
+			int readData = fileReader.read();
+			System.out.println((char)readData);
+		} catch (IOException e) {
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+		
+	}
+}

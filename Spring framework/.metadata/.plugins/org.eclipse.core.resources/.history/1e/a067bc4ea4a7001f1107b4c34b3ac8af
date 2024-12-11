@@ -1,0 +1,14 @@
+package com.piseth.java.school;
+
+public class Subject {
+	private String title;
+	
+	public void init() {
+		System.out.println("Subject created");
+	}
+	
+	public void destroy() {
+		System.out.println("Subject destroyed");
+	}
+	
+}

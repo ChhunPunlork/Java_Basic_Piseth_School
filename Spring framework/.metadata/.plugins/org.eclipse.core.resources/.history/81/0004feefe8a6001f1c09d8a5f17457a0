@@ -1,0 +1,18 @@
+package com.piseth.java.BeanLifecycle;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class Main {
+
+	public static void main(String[] args) {
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(BeanConfig.class);
+		context.registerShutdownHook();// jvm tell to call preDestroy and postConstruct
+
+		System.out.println("Application started");
+		Student student = context.getBean(Student.class);
+		student.display();
+		System.out.println("Finished application");
+//		context.close();
+	}
+
+} 

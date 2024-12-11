@@ -1,0 +1,36 @@
+package IOStream;
+
+import java.io.FileReader;
+import java.io.IOException;
+
+public class FileReaderDemo {
+    public static void main(String[] args) {
+        String fileName = "C:\\Users\\Asus\\OneDrive\\Desktop\\IOData.txt";
+        FileReader fileReader = null;
+        int data;
+        
+        try {
+            fileReader = new FileReader(fileName);
+            System.out.println("Reading file: " + fileName);
+            
+            while ((data = fileReader.read()) != -1) {
+                // Print each character and its ASCII value for debugging
+                System.out.print((char) data);
+                System.out.println(data);
+            }
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        } finally {
+            // Ensure the fileReader is closed after use
+            if (fileReader != null) {
+                try {
+                    fileReader.close();
+                } catch (IOException e) {
+                    System.out.println(e.getMessage());
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+}

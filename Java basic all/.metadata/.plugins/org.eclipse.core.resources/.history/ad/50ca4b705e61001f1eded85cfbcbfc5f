@@ -1,0 +1,9 @@
+package IOStream;
+
+public class FileReader {
+	public static void main(String[] arqs) {
+		String fileName = "C:\\\\\\\\Users\\\\\\\\Asus\\\\\\\\OneDrive\\\\\\\\Desktop\\\\\\\\IOData.txt";
+		
+		
+	}
+}

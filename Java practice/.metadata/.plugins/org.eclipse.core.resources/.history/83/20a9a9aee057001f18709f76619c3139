@@ -1,0 +1,30 @@
+package JDBC;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class JDBCDemo {
+
+	public static void main(String[] args) {
+		Connection connection = null;
+		StudentService studentService = new StudentService();
+		try {
+			 // Database connection detail
+            String url = "jdbc:postgresql://localhost:5432/Student";
+            String user = "Lorkdb";
+            String password = "Lork10604";
+            //Driver
+            Class.forName("org.postgresql.Driver");
+            //Connection to db
+			connection = DriverManager.getConnection(url, user, password);
+			System.out.println("Successed!");
+		} catch (ClassNotFoundException | SQLException e) {
+			System.out.println("Not success!");
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+		
+	}
+
+}

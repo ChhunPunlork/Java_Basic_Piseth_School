@@ -1,0 +1,25 @@
+package IO_Stream;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Arrays;
+
+public class Inputstream {
+	public static void main(String[] arqs) {
+		byte [] myData = new byte[100];
+	 try {
+		InputStream input = new FileInputStream("D:\\Java Project\\file for text\\data.txt");
+		input.read(myData);
+		for(byte b : myData) {
+			System.out.print((char)b);
+		}
+		System.out.println(input.available());
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	 
+	}
+}

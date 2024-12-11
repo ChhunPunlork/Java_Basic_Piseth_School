@@ -1,0 +1,5 @@
+INDEX VERSION 1.134+C:\Users\Asus\OneDrive\Desktop\IT online courses\Java\Something researhed\Spring framework\.metadata\.plugins\org.eclipse.jdt.core
+2361580014.index
+1865797976.index
+3132402294.index
+1878836969.index

@@ -1,0 +1,15 @@
+package Lork.java;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class BeanConfig {
+	
+	public GreetingService greeting() {
+		return new CambodiaGreeting();
+	}
+	
+	public GreetingClience clience() {
+		return new GreetingClience();
+	}
+}

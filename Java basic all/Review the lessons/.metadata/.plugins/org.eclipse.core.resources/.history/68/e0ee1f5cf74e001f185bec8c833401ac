@@ -1,0 +1,38 @@
+package Map;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class MapDeom {
+	public static void main(String[] arqs) {
+		// mango 10.50$
+		// banana 12.0$
+		// apple 25$
+		Map<String, Double> MapFruit = new HashMap<>();
+		MapFruit.put("Mango", 10.50);
+		MapFruit.put("Banana", 12.0);
+		MapFruit.put("Banana", 15.0);
+		MapFruit.put("Apple", 25.0);
+		System.out.println(MapFruit);
+		System.out.println("====================================");
+//		Double BananaPrice = listFruit.get("Banana");
+//		System.out.println(BananaPrice);
+		
+		
+		//update element
+//		listFruit.put("Banana", 15.00);
+//		System.out.println(listFruit);
+		//MapFruit.replace("Banana", 120.00);
+		MapFruit.replace("Banana", 120.0, 12.00);
+		
+		
+		//remove element
+		MapFruit.remove("Banana", 12.0);
+		
+		//check
+		boolean exis = MapFruit.containsKey("Banana");
+		System.out.println(exis);
+		
+		MapFruit.keySet();
+	}
+}

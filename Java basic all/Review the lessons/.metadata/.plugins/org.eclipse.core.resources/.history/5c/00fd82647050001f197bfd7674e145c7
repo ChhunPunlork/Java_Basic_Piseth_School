@@ -1,0 +1,42 @@
+package Test;
+
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.HashSet;
+import java.util.Set;
+
+public class VoterService {
+	private static Set<Voter> voters = new HashSet<>();
+	private static int count = 0;
+	
+	public void register(Person person) {
+		validate(person);
+		Voter voter = new Voter();
+		voter.setPerson(person);
+		voter.setLocation("Phon Penh");
+		count++;
+		voter.setCode("PP" + count);
+		voters.add(voter);
+		
+		
+	}
+	
+	public static void display() {
+		for(Voter voter : voters) {
+			System.out.println(voter);
+		}
+	}
+	
+	public void validate(Person person) {
+		if(person == null) {
+			throw new RuntimeException("Not voter!");
+		}
+		if(person.getIdCard() == null) {
+			throw new RuntimeException("If you don't have Id card you can't vote!");
+		}
+		Period period = Period.between(person.getDateOfbirdth(), LocalDate.now());
+		if(period.getYears() < 18) {
+			throw new RuntimeException("If you aren't an adult you cannot vote!");
+		}
+	}
+}

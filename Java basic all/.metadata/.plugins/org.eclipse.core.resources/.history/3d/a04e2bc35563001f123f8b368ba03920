@@ -1,0 +1,17 @@
+package Main_Demo_FileSevice;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class File_Service {
+	String FileName = "C:\\Users\\Asus\\OneDrive\\Desktop\\FruitDara.txt";
+	
+	public void ToFile() {
+		try {
+			FileWriter fileWriter = new FileWriter(FileName);
+		} catch (IOException e) {
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+	}
+}

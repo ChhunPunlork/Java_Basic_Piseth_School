@@ -1,0 +1,15 @@
+package Map;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class MapDeom {
+	public static void main(String[] arqs) {
+		//mango 10.50$
+		//banana 12.0$
+		//apple 25$
+		Map<String, Double> listFruit = new HashMap<>();
+		System.out.println(listFruit.toString());
+		
+	}
+}

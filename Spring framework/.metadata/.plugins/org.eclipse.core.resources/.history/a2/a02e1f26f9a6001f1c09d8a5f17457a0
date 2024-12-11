@@ -1,0 +1,10 @@
+package com.java.BeanScopes;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class ProtoTypeBean {
+	public ProtoTypeBean() {
+		System.out.println("ProtoTypeBean is instantiated");
+	}
+}

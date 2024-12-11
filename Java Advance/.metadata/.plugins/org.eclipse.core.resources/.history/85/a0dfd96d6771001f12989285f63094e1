@@ -1,0 +1,18 @@
+package Piseth.java.school;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		
+	}
+	void WithDraw() {
+		System.out.println("Enter withdraw fucntions");
+		
+		
+		
+		
+		System.out.println("Exit");
+	}
+	
+}

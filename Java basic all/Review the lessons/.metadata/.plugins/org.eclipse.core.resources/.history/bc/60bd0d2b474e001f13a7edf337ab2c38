@@ -1,0 +1,5 @@
+package schoolApp;
+
+public enum gender {
+	M, F;
+}

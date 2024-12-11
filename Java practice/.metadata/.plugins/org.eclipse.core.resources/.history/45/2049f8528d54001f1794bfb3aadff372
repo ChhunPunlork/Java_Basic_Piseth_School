@@ -1,0 +1,81 @@
+package GuiSwing.creating;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.GridBagLayout;
+import java.awt.GridLayout;
+
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
+
+public class Student_form extends JFrame{
+	public Student_form() {
+		this.setTitle("Student Info");
+		this.setSize(400, 500);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setLocationRelativeTo(null);
+		JPanel form = CreateForm();
+		this.getContentPane().add(form, BorderLayout.NORTH);
+		
+		this.setVisible(true);
+	}
+	private JPanel CreateForm() {
+		JPanel panel = new JPanel();
+		panel.setLayout(new GridLayout(5, 2));
+		//name
+		JLabel lblName = new JLabel("Name: ");
+		JTextField txtName = new JTextField();
+		//gender
+		JLabel lblGender = new JLabel("Gender: ");
+		JRadioButton rdoMale = new JRadioButton("Male");
+		JRadioButton rdoFamale = new JRadioButton("Famale");
+		ButtonGroup btGroup = new ButtonGroup();
+		btGroup.add(rdoMale);
+		btGroup.add(rdoFamale);
+		JPanel pnGender = new JPanel(new FlowLayout());
+		pnGender.add(rdoMale);
+		pnGender.add(rdoFamale);
+		//grade
+		JLabel lblGrade = new JLabel("Grade: ");
+		Integer[] grades = new Integer[] {1, 2, 3,4, 5, 6, 7, 8, 9, 10, 11, 12};
+		JComboBox<Integer> cbxGrade = new JComboBox<>(grades);
+		
+		JLabel lblAge = new JLabel("Age: ");
+		JTextField txtAge = new JTextField();
+		
+		JButton btnSave = new JButton("Save");
+		
+		panel.add(lblName);
+		panel.add(txtName);
+		panel.add(lblGender);
+		panel.add(pnGender);
+		panel.add(lblGrade);
+		panel.add(cbxGrade);
+		panel.add(lblAge);
+		panel.add(txtAge);
+		panel.add(btnSave);
+		return panel;
+	}
+	
+	private JTable CreateTable() {
+		JTable table = new JTable();
+		String[] ColumnName = new String[] {"Name", "Gender", "Grade", "Age"};
+		Object[][] RowData = {
+				{"Ratha", "Male", 12, 24},	
+				{"Panha", "Male", 12, 19},	
+		};
+		DefaultTableModel TbMd = new DefaultTableModel(RowData, ColumnName);
+		
+		
+		return table;
+	}
+	
+}

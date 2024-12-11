@@ -1,0 +1,12 @@
+package Lork.java;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class GreetingClience {
+	private GreetingService greetingService;
+	
+	@Autowired
+	public void greet() {
+		greetingService.SayHello();
+	}
+}

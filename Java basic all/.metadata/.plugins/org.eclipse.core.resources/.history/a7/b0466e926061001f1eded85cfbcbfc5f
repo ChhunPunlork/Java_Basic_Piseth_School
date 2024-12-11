@@ -1,0 +1,14 @@
+package IOStream;
+
+public class FileWriterDemo {
+
+	public static void main(String[] args) {
+		String fileName = "C:\\Users\\Asus\\OneDrive\\Desktop\\IOData.txt";
+		int data;
+		FileWriter fileWriter = null;
+		
+		fileWriter = new FileWriter()
+
+	}
+
+}

@@ -1,0 +1,13 @@
+package com.piseth.java.PhoneShop.DTO;
+
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
+
+public class BrandDTO {
+	@Getter @Setter
+	private Integer id;
+	private String name;
+
+}

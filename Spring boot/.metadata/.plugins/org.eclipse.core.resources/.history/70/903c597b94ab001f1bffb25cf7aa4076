@@ -1,0 +1,14 @@
+package com.piseth.java.PhoneShop.Entity;
+
+import jakarta.persistence.Entity;
+import lombok.Data;
+
+@Data
+@Entity
+public class Brand {
+	
+	private Integer id;
+	
+	private String name;
+	
+}

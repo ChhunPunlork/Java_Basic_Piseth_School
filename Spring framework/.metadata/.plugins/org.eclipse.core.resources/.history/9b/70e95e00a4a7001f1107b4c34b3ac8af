@@ -1,0 +1,8 @@
+package com.piseth.java.school;
+
+public class Subject {
+	private String title;
+	
+	
+	
+}

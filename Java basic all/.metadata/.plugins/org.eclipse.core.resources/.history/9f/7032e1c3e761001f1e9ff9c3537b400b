@@ -1,0 +1,18 @@
+package SetDemo;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class SetDemo {
+	public static void main(String[] arqs) {
+		Set<String> set = new HashSet<>();
+		set.add("Lork");
+		set.add("Leu");
+		set.add("Long");
+		set.add("Khouch");
+		
+		for(String name : set) {
+			System.out.println(name);
+		}
+	}
+}

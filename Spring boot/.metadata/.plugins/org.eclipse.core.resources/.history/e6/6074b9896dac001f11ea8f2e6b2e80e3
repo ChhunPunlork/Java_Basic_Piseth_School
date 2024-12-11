@@ -1,0 +1,16 @@
+package com.piseth.java.PhoneShop.exceptoin;
+
+import org.springframework.http.HttpStatus;
+
+public class ResourceNotFounException extends ApiException{
+
+//	public ResourceNotFounException(HttpStatus status, String message) {
+//		super(status, message);
+//		
+//	}
+	public ResourceNotFounException(String message) {
+		super(HttpStatus.NOT_FOUND, message);
+		
+	}
+	
+}

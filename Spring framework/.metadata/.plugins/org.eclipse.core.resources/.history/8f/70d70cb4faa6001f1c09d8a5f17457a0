@@ -1,0 +1,13 @@
+package com.java.BeanLifeCycle;
+
+import javax.annotation.PostConstruct;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class MyBean {
+	@PostConstruct
+	public void fistPrint() {
+		System.out.println("Bean is being initialize");
+	}
+}

@@ -1,0 +1,120 @@
+package JDBC;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.GridBagLayout;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+
+public class GUI_form extends JFrame {
+	private JLabel lblName, lblGender, lblGrade, lblId;
+	private JTextField txtName, txtId;
+	private Integer[] grades = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+	private JComboBox<Integer> cbxGrade;
+	private JRadioButton rdoMale, rdoFamale;
+	private ButtonGroup buttonGroup;
+	private JPanel pGender;
+	private JButton btSave, btDelete;
+	private JTable table = new JTable();
+	private int seletedRow = -1;
+
+	public GUI_form() {
+		this.setSize(400, 500);
+		this.setTitle("Student form");
+		this.setLocationRelativeTo(null);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		JPanel form = CreateForm();
+		this.getContentPane().add(form, BorderLayout.NORTH);
+		table = CreateTable();
+		JScrollPane JS = new JScrollPane();
+		JS.getViewport().add(table);
+		this.getContentPane().add(JS);
+
+		this.setVisible(true);
+	}
+
+	public JPanel CreateForm() {
+		JPanel panel = new JPanel();
+		panel.setLayout(new GridLayout(5, 2));
+
+		// id
+		lblId = new JLabel("Id: ");
+		txtId = new JTextField();
+
+		// Name
+		lblName = new JLabel("Name: ");
+		txtName = new JTextField();
+
+		// gender
+		lblGender = new JLabel("Gender: ");
+		rdoMale = new JRadioButton("Male");
+		rdoFamale = new JRadioButton("Famale");
+		buttonGroup = new ButtonGroup();
+		buttonGroup.add(rdoMale);
+		buttonGroup.add(rdoFamale);
+		pGender = new JPanel(new FlowLayout());
+		pGender.add(rdoMale);
+		pGender.add(rdoFamale);
+
+		// grade
+		lblGrade = new JLabel("Grade: ");
+		cbxGrade = new JComboBox<>(grades);
+
+		// button
+		btSave = new JButton("Save");
+		btDelete = new JButton("Delete");
+
+		panel.add(lblId);
+		panel.add(txtId);
+		panel.add(lblName);
+		panel.add(txtName);
+		panel.add(lblGender);
+		panel.add(pGender);
+		panel.add(lblGrade);
+		panel.add(cbxGrade);
+		panel.add(btSave);
+		
+		btSave.addActionListener(new ClickListener());
+
+		return panel;
+	}
+
+	public JTable CreateTable() {
+		
+		String[] ColumnName = new String[] { "id", "name", "gender", "grade" };
+		Object[][] RowData = {
+
+		};
+
+		DefaultTableModel model = new DefaultTableModel(RowData, ColumnName);
+		JTable table = new JTable(model);
+		return table;
+	}
+	private class ClickListener implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			
+			
+		}
+		
+	}
+	public void SetValue() {
+		DefaultTableModel model = (DefaultTableModel) table.getModel();
+		seletedRow = 
+	}
+}

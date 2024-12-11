@@ -1,0 +1,99 @@
+package GuiSwing.creating;
+
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.GridBagLayout;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.util.EventListener;
+
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
+
+public class Student_form extends JFrame{
+	private JPanel panel;
+	private JLabel lblName, lblGender;
+	private JTextField txtName;
+	private JRadioButton rdoMale;
+	private JRadioButton rdoFamale;
+	private ButtonGroup btGroup;
+	private JButton btSave;
+	private JPanel pnGender;
+	private JLabel lblGrade;
+	private JLabel lblAge;
+	private JTextField txtAge;
+	private JComboBox<Integer> cbxGrade;
+	private int selectedRow = -1;
+	private Integer[] Grades = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
+	
+	private JTable table = new JTable();
+	
+	public Student_form() {
+		this.setTitle("Student Information");
+		this.setSize(400, 500);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setLocationRelativeTo(null);
+		
+		JPanel form = CreateForm();
+		this.getContentPane().add(form, BorderLayout.NORTH);
+		
+		this.setVisible(true);
+	}
+	 private JPanel CreateForm() {
+		 JPanel panel = new JPanel();
+		 panel.setLayout(new GridLayout(2, 5));
+		 //Name form
+		 lblName = new JLabel("Name: ");
+		 txtName = new JTextField();
+		 
+		 //Gender form
+		 lblGender = new JLabel("Gender: ");
+		 rdoMale = new JRadioButton("Male");
+		 rdoFamale = new JRadioButton("Famale");
+		 btGroup = new ButtonGroup();
+		 btGroup.add(rdoMale);
+		 btGroup.add(rdoFamale);
+		 pnGender.add(rdoMale);
+		 pnGender.add(rdoFamale);
+		 pnGender = new JPanel(new FlowLayout());
+		 pnGender.add(pnGender);
+		 
+		 //Grade form
+		 lblGrade = new JLabel("Grade: ");
+		 cbxGrade = new JComboBox<Integer>(Grades);
+		 
+		 //Age form
+		 lblAge = new JLabel("Age: ");
+		 txtAge = new JTextField();
+		 
+		 //Save button
+		 btSave = new JButton("Save");
+		 
+		 panel.add(lblName);
+		 panel.add(txtName);
+		 panel.add(lblGender);
+		 panel.add(pnGender);
+		 panel.add(lblGrade);
+		 panel.add(cbxGrade);
+		 panel.add(lblAge);
+		 panel.add(txtAge);
+		 panel.add(btSave);
+		 
+		 return panel;
+	 }
+	
+	
+	
+}

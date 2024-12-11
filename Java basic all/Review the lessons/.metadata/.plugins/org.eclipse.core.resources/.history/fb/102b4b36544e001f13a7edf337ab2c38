@@ -1,0 +1,29 @@
+package schoolApp;
+
+public class School_App {
+
+	public static void main(String[] args) {
+		School school = new School();
+		school.setName("Punlork School");
+		System.out.println(school.getName());
+
+		Student st1 = new Student(1, "Som Sopanha", Gender.M);
+		Student st2 = new Student(2, "Chhun Punlork", Gender.M);
+		Student st3 = new Student(3, "Lim Pisoth", Gender.M);
+		school.registerStudent(st1);
+		school.registerStudent(st2);
+		school.registerStudent(st3);
+
+		school.displayStudent();
+		System.out.println("========================");
+
+		school.sortByname();
+		
+		System.out.println("========================");
+		
+		Student studentUpdate  = new Student(1, "Leu", Gender.F);
+		school.UpdateStudent(2, studentUpdate);
+		
+		school.displayStudent();
+	}
+}

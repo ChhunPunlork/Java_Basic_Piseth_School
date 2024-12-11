@@ -1,0 +1,14 @@
+package test;
+
+public class SchoolApp {
+	public static void main(String [] qrqs) {
+		School school = new School();
+		school.setName("=================Registration Student================");
+		
+		
+		
+		
+		
+		System.out.println(school.getName());
+	}
+}

@@ -1,0 +1,14 @@
+package RegisterVoter;
+
+import java.time.LocalDate;
+
+public class VoterApp {
+	public static void main(String[] arqs) {
+		Person person1 = new Person(1L, "Chhun Punlork", "M", LocalDate.of(2002, 9, 15), "09641");
+		VoterService voterService = new VoterService();
+		voterService.register(person1);
+		
+		voterService.displayVoter();
+		
+	}
+}

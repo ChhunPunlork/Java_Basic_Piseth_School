@@ -1,0 +1,80 @@
+package Testing;
+
+import java.util.Arrays;
+
+public class Testsss {
+
+	public static void main(String[] args) {
+		deletingByIndx();
+	}
+
+	public static void addingArray() {
+		int a[] = { 10, 20, 30, 40, 50 };
+
+		int b[] = new int[a.length + 1];
+		b[b.length - 1] = 60;
+		for (int i = 0; i < a.length; i++) {
+			b[i] = a[i];
+		}
+
+		System.out.println(Arrays.toString(a));
+		System.out.println(Arrays.toString(b));
+	}
+
+	public static void addingSpecificIndex() {
+		int a[] = { 10, 20, 40, 50 };
+		int IndexToAdd = 2;
+		int ValueToAdd = 30;
+
+		int b[] = new int[a.length + 1];
+
+		for (int i = 0; i < IndexToAdd; i++) {
+			b[i] = a[i];
+		}
+		System.out.println(Arrays.toString(b));
+		
+		for(int i= IndexToAdd; i<b.length-1; i++) {
+			b[i+1] = a[i];
+		}
+		b[IndexToAdd] = ValueToAdd;
+		System.out.println(Arrays.toString(b));
+	}
+	public static void updatingIndex() {
+		int a[] = { 10, 20, 40, 40, 50 };
+		int IndexToUpdate = 2;
+		int ValueToUpdate = 30;
+		
+		a[IndexToUpdate] = ValueToUpdate;
+		System.out.println(Arrays.toString(a));
+	}
+	public static void updatingManyElements() {
+		int a[] = {10, 20, 40, 40, 50, 60, 71, 74, 80};
+		int count = 0;
+		for(int i=0; i<a.length; i++) {
+			if(a[i]>50) {
+				count++;
+			}
+		}
+		System.out.println("/Numbers < 50 count/: " + count);
+		for(int i=0; i<a.length; i++) {
+			if(a[i]>50) {
+				a[i] = a[i] + 20;
+			}
+		}
+		System.out.println(Arrays.toString(a));
+	}
+	public static void deletingByIndx() {
+		int a[] = { 10, 20, 40, 30, 40, 50 };
+		int IndexToDelete = 2;
+		
+		int b[] = new int [a.length-1];
+		for(int i=0; i<IndexToDelete; i++) {
+			b[i] = a[i];
+		}
+		System.out.println(Arrays.toString(b));
+		for(int i=IndexToDelete; i<b.length; i++) {
+			b[i] = a[i+1];
+		}
+		System.out.println(Arrays.toString(b));
+	}
+}

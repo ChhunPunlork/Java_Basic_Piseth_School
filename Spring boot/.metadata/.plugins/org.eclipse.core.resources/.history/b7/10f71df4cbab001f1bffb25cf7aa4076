@@ -1,0 +1,13 @@
+	package com.piseth.java.PhoneShop.test.mapper;
+
+import com.piseth.java.PhoneShop.test.DTO.BrandDTO;
+import com.piseth.java.PhoneShop.test.entity.Brand;
+
+public class Mapper {
+	public static Brand toBrand(BrandDTO brandDTO) {
+		Brand brand = new Brand();
+		brand.setId(brandDTO.getId());
+		brand.setName(brand.getName());
+		return brand;
+	}
+}

@@ -1,0 +1,19 @@
+package com.java.BeanLifeCycle;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class MyBean {
+	@PostConstruct
+	public void fistPrint() {
+		System.out.println("Bean is being initialize");
+	}
+	
+	@PreDestroy
+	public void secondPrint() {
+		System.out.println("Bean is being destroy");
+	}
+}

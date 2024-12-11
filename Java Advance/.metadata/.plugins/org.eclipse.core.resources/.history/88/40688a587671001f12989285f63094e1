@@ -1,0 +1,11 @@
+package com.piseth.java.school;
+
+
+public class GreetingApplication {
+	private GreetingService greetingService;
+	
+	public void Greet() {
+		greetingService.SayHello();
+	}
+
+}

@@ -1,0 +1,47 @@
+package test;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+
+public class School {
+	private String name;
+	private ArrayList<Student> students = new ArrayList<Student>();
+
+	public void register(Student student) {
+		students.add(student);
+	}
+	
+	public void displayStudent() {
+		for(Student student : students) {
+			System.out.println("\tId: %d, Name: %s , Gender: %s".formatted(student.getId(), student.getName(), student.getGender()));
+		}
+	}
+	
+	public void SortByName() {
+		Comparator<Student> comparator = new Comparator<Student>() {
+			
+			@Override
+			public int compare(Student o1, Student o2) {
+				// TODO Auto-generated method stub
+				return o1.getName().compareTo(o2.getName());
+			}
+		};
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public ArrayList<Student> getStudents() {
+		return students;
+	}
+
+	public void setStudents(ArrayList<Student> students) {
+		this.students = students;
+	}
+
+}

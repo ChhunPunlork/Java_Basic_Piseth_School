@@ -1,0 +1,15 @@
+package com.piseth.java.PhoneShop.Entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name = "models")
+public class Model {
+	
+	private Integer id;
+	private String name;
+	private Brand brandId;
+}

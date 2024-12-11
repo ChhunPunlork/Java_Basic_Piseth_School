@@ -1,0 +1,36 @@
+package Lork.java.Customer;
+
+public class Customer {
+	private int id;
+	private String name;
+	private String gender;
+	
+	public int getID() {
+		return id;
+	}
+	public void setID(int iD) {
+		id = iD;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	
+	public void customersInfo(String name, String gender) {
+		this.name = getName();
+		this.gender = getGender();
+	}
+	@Override
+	public String toString() {
+		return "Customer [name=" + name + ", gender=" + gender + ", ID=" + id +"]";
+	}
+	
+}

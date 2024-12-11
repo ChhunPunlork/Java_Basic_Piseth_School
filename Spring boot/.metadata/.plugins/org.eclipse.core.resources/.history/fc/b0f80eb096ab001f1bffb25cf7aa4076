@@ -1,0 +1,7 @@
+package com.piseth.java.PhoneShop.repository;
+
+import com.piseth.java.PhoneShop.Entity.Brand;
+
+public interface BrandRepository {
+	Brand create(Brand brand);
+}

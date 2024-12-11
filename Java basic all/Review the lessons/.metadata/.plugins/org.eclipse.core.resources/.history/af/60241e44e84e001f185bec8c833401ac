@@ -1,0 +1,33 @@
+package schoolApp;
+
+public class School_App {
+
+	public static void main(String[] args) {
+		School school = new School();
+		school.setName("===================Lork App==================");
+		System.out.println(school.getName());
+		
+		Student st1 = new Student(1, "Chhun Punlork", Gender.M);
+		Student st2 = new Student(2, "Chan Vatanaka", Gender.M);
+		Student st3 = new Student(3, "Keo Sopheng", Gender.M);
+		Student st4 = new Student(4, "Lim Panhasak", Gender.M);
+		Student st5 = new Student(1, "Ngoun Soben", Gender.M);
+		
+		school.register(st1);
+		school.register(st2);
+		school.register(st3);
+		school.register(st4);
+		school.register(st5);
+		
+		school.display();
+		System.out.println("=================After sort==================");
+		school.sortbyname();
+		school.display();
+		
+		System.out.println("=================Find by Id==================");
+		Student foundStudent = school.findbyId(2);
+		System.out.println(foundStudent);
+		
+		
+	}	
+}

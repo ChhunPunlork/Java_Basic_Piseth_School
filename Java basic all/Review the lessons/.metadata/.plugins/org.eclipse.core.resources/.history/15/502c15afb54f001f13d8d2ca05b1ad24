@@ -1,0 +1,16 @@
+package Map;
+
+import java.util.TreeMap;
+
+public class TreeMapDemo {
+	public static void main(String[] arqs) {
+		TreeMap<String, Double> treeFruit = new TreeMap<>();
+		treeFruit.put("Banana", 12.0);
+		treeFruit.put("Mango", 15.0);
+		treeFruit.put("Apple", 20.0);
+		treeFruit.put("Grape", 15.0);
+		
+		System.out.println(treeFruit);
+		System.out.println(treeFruit.higherKey("Grape"));
+	}
+}

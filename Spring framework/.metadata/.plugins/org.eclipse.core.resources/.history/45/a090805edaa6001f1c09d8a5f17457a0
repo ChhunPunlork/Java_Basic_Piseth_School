@@ -1,0 +1,19 @@
+package com.piseth.java.BeanLifecycle;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Student {
+	
+//	@PostConstruct
+	public void setUp() {
+		System.out.println("After student object created");
+	}
+	@PreDestroy
+	public void clear() {
+		System.out.println("Before student object destroyed");
+	}
+}

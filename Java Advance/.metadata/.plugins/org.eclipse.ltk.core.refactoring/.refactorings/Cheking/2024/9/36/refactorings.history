@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;Lork.java&apos; to &apos;Lork.java.school&apos;&#x0D;&#x0A;- Original project: &apos;Cheking&apos;&#x0D;&#x0A;- Original element: &apos;Cheking/src/Lork.java&apos;&#x0D;&#x0A;- Renamed element: &apos;Cheking/src/Lork.java.school&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;Lork.java&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;Lork.java" name="Lork.java.school" qualified="false" references="true" stamp="1725677206992" textual="false" version="1.0"/>
+</session>

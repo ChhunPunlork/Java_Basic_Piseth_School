@@ -1,0 +1,5 @@
+package com.piseth.software;
+@Service
+public class ClassB {
+
+}

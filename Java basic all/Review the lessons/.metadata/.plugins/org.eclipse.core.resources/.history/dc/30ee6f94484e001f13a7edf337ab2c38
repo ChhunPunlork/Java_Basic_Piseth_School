@@ -1,0 +1,10 @@
+package schoolApp;
+
+public class School_App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,90 @@
+package Lork.java.Demo;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import Lork.java.Customer.Customers;
+import Lork.java.GtSt.Products;
+import Lork.java.Order.Orders;
+
+public class Demo {
+	private static List<Products> products = new ArrayList<>();
+	private static List<Customers> customer = new ArrayList<>();
+	private static List<Orders> orders = new ArrayList<>();
+	private static int proCounter = 1;
+	private static int custCounter = 1;
+	private static int orderCounter = 1;
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		boolean exit = false;
+		while (!exit) {
+			System.out.println("Welcome to Mart Management System");
+			System.out.println("1. Add Product");
+			System.out.println("2. Add Customer");
+			System.out.println("3. Place Order");
+			System.out.println("4. Display All Products");
+			System.out.println("5. Display All Customers");
+			System.out.println("6. Display All Orders");
+			System.out.println("7. Exit");
+			System.out.print("Choose an option: ");
+			int choice = scanner.nextInt();
+			scanner.nextLine(); // Consume newline character
+			switch (choice) {
+			case 1:
+				
+			}
+		}
+	}
+	private static void addPro(Scanner scanner) {
+		System.out.println("Enter product name: ");
+		String proName = scanner.nextLine();
+		System.out.println("Enter product price: ");
+		double proPrice = scanner.nextDouble();
+		System.out.println("Enter initial quantity: ");
+		int quantity = scanner.nextInt();
+		
+		Products newPro = new Products(proCounter++, proName, proPrice, quantity);
+		products.add(newPro);
+		System.out.println("Product added successfully.");
+		System.out.println("----------------------------------------");
+	}
+	private static void addCustomer(Scanner scanner) {
+		System.out.println("Enter customer name: ");
+		String custName = scanner.nextLine();
+		System.out.println("Enter customer gender: ");
+		String custGender = scanner.nextLine();
+		System.out.println("Enter customer contact information: ");
+		String custCont = scanner.nextLine();
+		
+		Customers newCustomers = new Customers(custCounter++, custName, custGender, custCont);
+		customer.add(newCustomers);
+		System.out.println("Customers added successfully.");
+		System.out.println("----------------------------------------");
+	}
+	private static void placOrder(Scanner scanner) {
+		
+	}
+	private static void displayAllPros() {
+		System.out.println("Products: ");
+		for(Products p : products) {
+			System.out.println(p);
+		}
+		System.out.println("---------------------------------------");
+	}
+	private static void displayAllCustomers() {
+		System.out.println("Customers: ");
+		for(Customers cm : customer) {
+			System.out.println(cm);
+		}
+		System.out.println("---------------------------------------");
+	}
+	private static void displayAllOrders() {
+		System.out.println("Orders: ");
+		for(Orders od : orders) {
+			System.out.println(od);
+		}
+		System.out.println("---------------------------------------");
+	}
+}

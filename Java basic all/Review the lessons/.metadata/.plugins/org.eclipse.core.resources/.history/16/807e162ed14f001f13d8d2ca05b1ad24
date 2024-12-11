@@ -1,0 +1,11 @@
+package Exception;
+
+public class ExceptionDemo {
+	public static void main(String[] arqs) {
+		System.out.println("First line");
+		int a = 5;
+		int b = 0;
+		double x = a/b;
+		System.out.println("Seond line");
+	}
+}

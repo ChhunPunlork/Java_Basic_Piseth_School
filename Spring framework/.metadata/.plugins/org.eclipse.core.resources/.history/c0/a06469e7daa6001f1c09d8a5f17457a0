@@ -1,0 +1,19 @@
+package com.piseth.java.BeanLifecycle;
+
+import javax.annotation.PostConstruct;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Subject {
+	private String title;
+	
+	@PostConstruct
+	public void init() {
+		System.out.println("Subject created");
+	}
+	
+	public void setSubject(String title) {
+		this.title = title;
+	}
+}

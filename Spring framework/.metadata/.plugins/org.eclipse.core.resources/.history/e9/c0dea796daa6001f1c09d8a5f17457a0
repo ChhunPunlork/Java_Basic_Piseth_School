@@ -1,0 +1,13 @@
+package com.piseth.java.BeanLifecycle;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Subject {
+	private String title;
+	
+	
+	public void init() {
+		System.out.println("Subject created");
+	}
+}

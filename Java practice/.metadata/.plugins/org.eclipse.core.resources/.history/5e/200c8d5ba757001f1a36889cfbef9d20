@@ -1,0 +1,18 @@
+package JDBC;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class StudentService {
+	public void Save(Connection connection) {
+		String sql = "INSERT INTO studens(name, gender, grade) VALUES('Lork', 'Male', 12)";
+		try {
+			Statement statement = connection.createStatement();
+			statement.executeUpdate(sql);
+		} catch (SQLException e) {
+			System.out.println("Errors!");
+			e.printStackTrace();
+		}
+	}
+}

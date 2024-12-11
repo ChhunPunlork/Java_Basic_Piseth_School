@@ -1,0 +1,23 @@
+package test;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+
+public class inputStream {
+
+	public static void main(String[] args){
+		InputStream input;
+		try {
+			input = new FileInputStream("D:\\Java Project\\file for text\\InputStr.txt");
+			input.read();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			
+			e.printStackTrace();
+		}
+		
+	}
+
+}

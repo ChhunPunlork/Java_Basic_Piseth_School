@@ -1,0 +1,11 @@
+package Set;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class SetDemo {
+	public static void main(String[] arqs) {
+		
+		System.out.println(Size.getAll());
+	}
+}

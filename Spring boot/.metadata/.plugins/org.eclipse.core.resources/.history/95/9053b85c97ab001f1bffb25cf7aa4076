@@ -1,0 +1,14 @@
+package com.piseth.java.PhoneShop.serviceImpl;
+
+import com.piseth.java.PhoneShop.Entity.Brand;
+import com.piseth.java.PhoneShop.service.BrandService;
+
+public class BrandServiceImpl implements BrandService{
+
+	@Override
+	public Brand create(Brand brand) {
+		
+		return null;
+	}
+
+}

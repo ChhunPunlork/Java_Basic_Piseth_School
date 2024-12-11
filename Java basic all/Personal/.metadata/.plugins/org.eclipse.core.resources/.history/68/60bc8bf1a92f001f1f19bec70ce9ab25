@@ -1,0 +1,45 @@
+package Lork.java.GtSt;
+
+public class Products{
+	private String ProName;
+	private int ProId;
+	private double ProPrice;
+	private int Quantity;
+	public Products(String proName, int ProId, double proPrice, int quantity) {
+		super();
+		ProName = proName;
+		
+		ProPrice = proPrice;
+		Quantity = quantity;
+	}
+	public String getProName() {
+		return ProName;
+	}
+	public void setProName(String proName) {
+		ProName = proName;
+	}
+	public int getProCode() {
+		return ProId;
+	}
+	public void setProCode(int proCode) {
+		ProId = proCode;
+	}
+	public double getProPrice() {
+		return ProPrice;
+	}
+	public void setProPrice(double proPrice) {
+		ProPrice = proPrice;
+	}
+	public int getQuantity() {
+		return Quantity;
+	}
+	public void setQuantity(int quantity) {
+		Quantity = quantity;
+	}
+	@Override
+	public String toString() {
+		return "Products [ProName=" + ProName + ", ProCode=" + ProId + ", ProPrice=" + ProPrice + ", Quantity="
+				+ Quantity + "]";
+	}
+	
+}

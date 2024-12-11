@@ -1,0 +1,15 @@
+package schoolApp;
+
+public class School_App {
+
+	public static void main(String[] args) {
+		School school = new School();
+		school.setName("Punlork School");
+		System.out.println(school.getName());
+		
+		Student st1 = new Student(1, "Chhun Punlork" , Gender.M);
+		school.registerStudent(st1);
+		
+		school.displayStudent();
+	}
+}

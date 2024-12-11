@@ -1,0 +1,10 @@
+package IO_Stream;
+
+import java.io.FileInputStream;
+
+public class Inputstream {
+	public static void main(String[] arqs) {
+	 InputStream input = new FileInputStream("D:\\Java Project\\file for text\\data.txt");
+	 
+	}
+}

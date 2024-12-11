@@ -1,0 +1,34 @@
+package Lork.java.GtSt;
+
+public class Gtst {
+	private String ProName;
+	private int ProCode;
+	private double ProPrice;
+	private int Quantity;
+	
+	public String getProName() {
+		return ProName;
+	}
+	public void setProName(String proName) {
+		ProName = proName;
+	}
+	public int getProCode() {
+		return ProCode;
+	}
+	public void setProCode(int proCode) {
+		ProCode = proCode;
+	}
+	public double getProPrice() {
+		return ProPrice;
+	}
+	public void setProPrice(double proPrice) {
+		ProPrice = proPrice;
+	}
+	public int getQuantity() {
+		return Quantity;
+	}
+	public void setQuantity(int quantity) {
+		Quantity = quantity;
+	}
+	
+}

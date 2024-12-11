@@ -1,0 +1,5 @@
+package com.java.BeanScopes;
+
+public class SingletonBean {
+
+}

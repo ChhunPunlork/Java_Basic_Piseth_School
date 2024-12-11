@@ -1,0 +1,45 @@
+package Lork.java;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class studentApplication {
+	private static List<Students> students =  List.of(
+			
+			new Students(1, "Lork", "M", 22),
+			new Students(2, "Dina", "M", 29),
+			new Students(3, "Sreyka", "FM", 26),
+			new Students(4, "Leu", "M", 23),
+			new Students(5, "Sreykhouch", "FM", 31),
+			new Students(6, "Nith", "M", 24),
+			new Students(7, "Nha", "M", 33),
+			new Students(8, "Meng", "M", 12),
+			new Students(9, "Rath", "FM", 29)
+			
+		);
+		
+	
+	
+	
+	public static void main(String[] args) {
+		List<Students> list1 = getStudents(students);
+		for(Students st : list1) {
+			System.out.println(st);
+		}
+		
+	}
+	
+	public static List<Students> getStudents(List<Students> students){
+		List<Students> list = new ArrayList<>();
+		int counter = 0;
+		int limit = 3;
+		for(Students st: students) {
+			if(st.getGender().equals("FM")) {
+				list.add(st);
+				counter++;
+			}
+			if(counter == limit) {
+				break;
+			}
+		}
+}

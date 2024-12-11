@@ -1,0 +1,17 @@
+package Exception;
+
+public class MultipleException {
+
+	public static void main(String[] args) {
+		String [] names = {"Lork", "Long", "Long"};
+		try {
+			int x = 5/0;
+			String name1 = names[3];
+			System.out.println(name1);
+		}catch(ArrayIndexOutOfBoundsException | ArithmeticException e2) {
+			e.printStackTrace();
+		}
+		System.out.println("Finish");
+	}
+
+}

@@ -1,0 +1,16 @@
+package FunctionsDemo;
+
+import java.util.Scanner;
+
+public class functionWithPara_Return {
+	public static void main() {
+		Scanner sc = new Scanner(System.in);
+		int num1 = sc.nextInt();
+		int num2 = sc.nextInt();
+		MultiNum(num1, num2);
+	}
+	public static double MultiNum(int num1, int num2) {
+		double total = num1 * num2;
+		return total;
+	}
+}

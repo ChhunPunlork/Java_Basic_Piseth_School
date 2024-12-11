@@ -1,0 +1,43 @@
+package JDBC;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class JDBCDemo {
+	private static Connection connection = null;
+	private static StudentService studentService = new StudentService();
+
+	public static void main(String[] args) {
+		studentService.SaveStudent(st1(), connect());
+	}
+
+	public static Connection connect() {
+		try {
+			// Database connection detail
+			String url = "jdbc:postgresql://localhost:5432/Student";
+			String user = "Lorkdb";
+			String password = "Lork10604";
+			// Driver
+			Class.forName("org.postgresql.Driver");
+			// Connection to db
+			connection = DriverManager.getConnection(url, user, password);
+			System.out.println("Successed!");
+		} catch (ClassNotFoundException | SQLException e) {
+			System.out.println("Not success!");
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+		return connection;
+	}
+	public static Student st1() {
+		Scanner sc = new Scanner(System.in);
+		String name = sc.next();
+		String gender = sc.next();
+		int grade = sc.nextInt();
+		Student student = new Student(name, gender, grade);
+		return student;
+	}
+
+}

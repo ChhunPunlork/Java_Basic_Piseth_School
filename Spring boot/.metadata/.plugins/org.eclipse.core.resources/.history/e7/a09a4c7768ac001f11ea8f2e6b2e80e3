@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/PhoneSale
+    username: Lorkdb
+    password: Lork10604
+  jpa:
+    properties:
+       hibernate: 
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate: 
+       ddl-auto: update

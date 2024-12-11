@@ -1,0 +1,11 @@
+package FunctionsDemo;
+
+public class functionWithPara_Return {
+	public static void main() {
+		
+	}
+	public static double MultiNum(int num1, int num2) {
+		double total = num1 * num2;
+		return total;
+	}
+}

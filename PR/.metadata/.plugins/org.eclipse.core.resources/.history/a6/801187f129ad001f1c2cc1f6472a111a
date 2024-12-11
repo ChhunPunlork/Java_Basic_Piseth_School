@@ -1,0 +1,11 @@
+package com.piseth.java.PhoneShop.mapper;
+
+import org.mapstruct.Mapper;
+
+import com.piseth.java.PhoneShop.DTO.BrandDTO;
+import com.piseth.java.PhoneShop.Entity.Brand;
+
+@Mapper
+public class BrandMapper {
+	Brand toBrand(BrandDTO dto);
+}

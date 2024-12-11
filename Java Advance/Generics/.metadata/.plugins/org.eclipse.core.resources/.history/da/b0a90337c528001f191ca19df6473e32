@@ -1,0 +1,19 @@
+package Lork.java;
+
+public class GenericInterface {
+	public static void mian(String[] arqs) {
+		String str = "dara";
+		Object obj = new Object();
+		obj = str;
+
+		Piseth<String> strG = new Piseth<>();
+		Piseth<Object> objG = new Piseth<>();
+
+		// strG = objG;
+		obj = strG;
+	}
+
+	static class Piseth<T> {
+
+	}
+}

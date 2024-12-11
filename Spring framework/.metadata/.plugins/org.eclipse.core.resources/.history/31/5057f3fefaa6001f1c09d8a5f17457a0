@@ -1,0 +1,14 @@
+package com.java.BeanLifeCycle;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+@SpringBootApplication
+public class MainApp {
+	@Autowired
+	private MyBean myBean;
+	
+	public static void main(String[] args) {
+		SpringApplication.run(MainApp.class, args);
+	}
+}

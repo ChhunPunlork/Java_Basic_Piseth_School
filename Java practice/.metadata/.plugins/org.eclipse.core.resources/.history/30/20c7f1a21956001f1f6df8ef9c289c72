@@ -1,0 +1,28 @@
+package JDBC.sql.java.Model.Service;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import JDBC.sql.java.Model.Student;
+
+public class Student_Service {
+	
+	public void save(Connection connection) {
+		String sql = "INSERT INTO student(name, gender, grade) VALUES ('Lork', 'M', 12)";
+		
+		try {
+			Statement statement = connection.createStatement();
+			statement.executeUpdate(sql);
+			System.out.println("Successfully");
+		} catch (SQLException e) {
+			System.out.println("Crazy");
+			e.printStackTrace();
+		}
+		
+	}
+
+	public void SaveStudent (Student student) {
+		
+	}
+}

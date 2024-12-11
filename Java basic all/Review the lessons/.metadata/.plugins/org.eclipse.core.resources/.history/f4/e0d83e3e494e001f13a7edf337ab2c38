@@ -1,0 +1,29 @@
+package schoolApp;
+
+import java.util.ArrayList;
+
+public class School {
+	private String name;
+	private ArrayList<String> students;
+	
+	public void registerStudent() {
+		
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public ArrayList<String> getStudents() {
+		return students;
+	}
+
+	public void setStudents(ArrayList<String> students) {
+		this.students = students;
+	}
+
+}

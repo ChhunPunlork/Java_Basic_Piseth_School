@@ -1,0 +1,17 @@
+package test;
+
+import java.util.Set;
+
+public class HashSet {
+	public static void main(String[] arqs) {
+		Set<String> hashSet = new java.util.HashSet<>();
+		hashSet.add("Lork");
+		hashSet.add("Leu");
+		hashSet.add("Long");
+		hashSet.add("Lim");
+		
+		System.out.println(hashSet);
+		
+	}
+
+}

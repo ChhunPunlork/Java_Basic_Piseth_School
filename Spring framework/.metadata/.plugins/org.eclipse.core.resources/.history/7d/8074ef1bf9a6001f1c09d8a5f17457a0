@@ -1,0 +1,7 @@
+package com.java.BeanScopes;
+
+public class ProtoTypeBean {
+	public ProtoTypeBean() {
+		System.out.println("ProtoTypeBean is instantiated");
+	}
+}

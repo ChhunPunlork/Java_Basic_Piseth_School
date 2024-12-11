@@ -1,0 +1,30 @@
+package Test;
+
+import java.time.LocalDate;
+import java.util.Scanner;
+
+import RegisterVoter.Voter;
+
+public class VoteApp {
+	public static void main(String[] arqs) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter your name: ");
+		String name = sc.next();
+		System.out.print("Enter your gender: ");
+		String gender = sc.next();
+		System.out.print("Input year of birdth");
+		int year = sc.nextInt();
+		System.out.print("Input month of birdth");
+		int month = sc.nextInt();
+		System.out.print("Input year of birdth");
+		int day = sc.nextInt();
+		System.out.print("Enter your idcard: ");
+		String idcard = sc.next();
+		Person person1 = new Person(name, gender, LocalDate.of(year, month, day), idcard);
+
+		VoterService voterService = new VoterService();
+		voterService.register(person1);
+
+		voterService.display();
+	}
+}

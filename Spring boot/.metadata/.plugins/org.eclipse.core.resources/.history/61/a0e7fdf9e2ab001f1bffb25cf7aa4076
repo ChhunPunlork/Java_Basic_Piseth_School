@@ -1,0 +1,30 @@
+package com.piseth.java.PhoneShop.exceptoin;
+
+import org.springframework.http.HttpStatus;
+
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
+
+@Data
+@RequiredArgsConstructor
+public class ApiException extends RuntimeException {
+	private HttpStatus status;
+	private String message;
+
+	public HttpStatus getStatus() {
+		return status;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setStatus(HttpStatus status) {
+		this.status = status;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+}

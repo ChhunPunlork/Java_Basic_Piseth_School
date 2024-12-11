@@ -1,0 +1,36 @@
+Data Design
+
+*Product:
+	-id (productId)
+	-name
+	-dateImport
+	-model
+	-brand
+	-color
+------------------------
+*Brand
+	-id
+	-name
+-----------------------
+*Model
+	-id
+	-name
+	-brandId
+-----------------------
+*Sale
+	-saleDate
+	-totalAmount
+
+	
+*Sale detail
+	-saleId
+	-productId
+
+Using JPA hyper net to auto build to postgresql
+JPA trov dak jea entity derbey somkol tha model rbos yg persist tov kan bd
+
+
+
+
+
+

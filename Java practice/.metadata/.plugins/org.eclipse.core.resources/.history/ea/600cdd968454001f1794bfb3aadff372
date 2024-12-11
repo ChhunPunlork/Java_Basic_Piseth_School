@@ -1,0 +1,10 @@
+package GuiSwing.creating;
+
+public class StudentDemoApplication {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

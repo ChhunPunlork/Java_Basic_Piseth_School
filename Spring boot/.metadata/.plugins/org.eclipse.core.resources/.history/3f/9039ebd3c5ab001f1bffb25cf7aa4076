@@ -1,0 +1,7 @@
+package com.piseth.java.PhoneShop.test.serviceImpt;
+
+import com.piseth.java.PhoneShop.test.service.BrandService;
+
+public class BrandServiceIpmt implements BrandService{
+
+}

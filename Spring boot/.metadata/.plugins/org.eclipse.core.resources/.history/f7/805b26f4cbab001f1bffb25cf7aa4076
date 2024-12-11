@@ -1,0 +1,27 @@
+package com.piseth.java.PhoneShop.test.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.piseth.java.PhoneShop.test.DTO.BrandDTO;
+import com.piseth.java.PhoneShop.test.entity.Brand;
+import com.piseth.java.PhoneShop.test.mapper.Mapper;
+import com.piseth.java.PhoneShop.test.service.BrandService;
+
+@RestController
+@RequestMapping("brands")
+public class BrandController {
+	@Autowired
+	private BrandService brandServie;
+	
+	@RequestMapping(method = RequestMethod.POST)
+	public ResponseEntity<?> create(@RequestBody BrandDTO brandDTO){
+		Brand brand = Mapper.toBrand(brandDTO);
+		brandServie.create(brand);
+		return ResponseEntity.ok(brand);
+	}
+}

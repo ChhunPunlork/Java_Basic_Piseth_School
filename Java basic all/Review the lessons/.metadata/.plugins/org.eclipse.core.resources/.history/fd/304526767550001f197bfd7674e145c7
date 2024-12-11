@@ -1,0 +1,21 @@
+package RegisterVoter;
+
+import java.time.LocalDate;
+import java.util.Scanner;
+
+public class VoterApp {
+	public static void main(String[] arqs) {
+		Scanner sc = new Scanner(System.in);
+		String name, idcard;
+		Long id;
+		String gender;
+		int year, month, day;
+		System.out.println("Enter your id: " + (id = sc.nextLong()));
+		System.out.println("Enter your name: " + (name = sc.next()));
+		System.out.println("Enter your gender: " + (gender = sc.next()));
+		System.out.println("Enter your datebirth: " + (year = sc.nextInt()) + (month = sc.nextInt()) + (day = sc.nextInt()));
+		System.out.println("Enter your idCard: " + (idcard = sc.next()));
+		
+		Person person = new Person(id, name, gender, LocalDate.of(year, month, day), idcard);
+	}
+}

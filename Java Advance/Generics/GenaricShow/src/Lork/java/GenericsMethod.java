@@ -1,0 +1,37 @@
+package Lork.java;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class GenericsMethod {
+	public static <T> boolean isEqual(GenericType<T> t1, GenericType<T> t2){
+		return t1.getValue().equals(t2.getValue());
+	}
+	public static <T> List<T> combine(List<T> list1, List<T> list2) {
+		List<T> result = new ArrayList<>();
+		result.addAll(list1);
+		result.addAll(list2);
+		return result;
+	}
+	public static void main(String[] args) {
+//		GenericType<Integer> t1 = new GenericType<>();
+//		t1.setValue(5);
+//		
+//		GenericType<Integer> t2 = new GenericType<>();
+//		t2.setValue(5);
+//		
+//		boolean test = GenericsMethod.isEqual(t1, t2);
+//		System.out.println(test);
+//		
+		List<String> list1 = new ArrayList<String>();
+		list1.add("test1");
+		list1.add("test2");
+		
+		List<String> list2 = new ArrayList<String>();
+		list2.add("test3");
+		list2.add("test4");
+		
+		List<String> result = combine(list1, list2);
+		System.out.println(result);
+	}
+}

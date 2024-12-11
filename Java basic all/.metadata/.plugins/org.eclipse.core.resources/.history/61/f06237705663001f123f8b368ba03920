@@ -1,0 +1,22 @@
+package Main_Demo_FileSevice;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+import Main_Demo.Fruit;
+import Main_Demo.Fruit_Shop_Service;
+
+public class File_Service {
+	String FileName = "C:\\Users\\Asus\\OneDrive\\Desktop\\FruitDara.txt";
+	Fruit_Shop_Service service;
+	public void ToFile(String data) {
+		try {
+			FileWriter fileWriter = new FileWriter(FileName);
+			fileWriter.write(data);
+			fileWriter.close();
+		} catch (IOException e) {
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+	}
+}

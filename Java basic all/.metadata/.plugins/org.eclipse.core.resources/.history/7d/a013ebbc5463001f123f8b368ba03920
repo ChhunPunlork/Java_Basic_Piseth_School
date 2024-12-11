@@ -1,0 +1,9 @@
+package Main_Demo_FileSevice;
+
+import java.io.FileWriter;
+
+public class File_Service {
+	String FileName = "C:\\Users\\Asus\\OneDrive\\Desktop\\FruitDara.txt";
+	
+	FileWriter fileWriter = new FileWriter(FileName);
+}

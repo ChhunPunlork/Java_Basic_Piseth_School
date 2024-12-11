@@ -1,0 +1,57 @@
+package Test;
+
+import java.time.LocalDate;
+
+public class Person {
+	private String name;
+	private String Gender;
+	private LocalDate dateOfbirdth;
+	private String idCard;
+
+	@Override
+	public String toString() {
+		return "Person info : [name=" + name + ", Gender=" + Gender + ", dateOfbirdth=" + dateOfbirdth + ", idCard="
+				+ idCard + "]";
+	}
+
+	public Person(String name, String gender, LocalDate dateOfbirdth, String idCard) {
+		super();
+		this.name = name;
+		Gender = gender;
+		this.dateOfbirdth = dateOfbirdth;
+		this.idCard = idCard;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getGender() {
+		return Gender;
+	}
+
+	public void setGender(String gender) {
+		Gender = gender;
+	}
+
+	public LocalDate getDateOfbirdth() {
+		return dateOfbirdth;
+	}
+
+	public void setDateOfbirdth(LocalDate dateOfbirdth) {
+		this.dateOfbirdth = dateOfbirdth;
+	}
+
+	public String getIdCard() {
+		return idCard;
+	}
+
+	public void setIdCard(String idCard) {
+		this.idCard = idCard;
+	}
+
+}

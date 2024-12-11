@@ -1,0 +1,9 @@
+package Lork.java;
+
+public class GreetingClience {
+	private GreetingService greetingService;
+	
+	public GreetingClience greeting() {
+		return greetingService.SayHello();
+	}
+}
